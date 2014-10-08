@@ -1,12 +1,12 @@
 import random
 import requests
+import os
 from flask import Flask, render_template, request, abort, redirect, url_for
 app = Flask(__name__, instance_relative_config = True)
 
 app.config.from_object('config')
-app.config.from_envvar('FLICKR_API_KEY', silent = True)
 
-flickr_params = {'api_key': app.config['FLICKR_API_KEY'],
+flickr_params = {'api_key': os.environ['FLICKR_API_KEY'],
                  'method': 'flickr.photos.search',
                  'format': 'json', 'nojsoncallback': '1',
                  'page':  '1', 'per_page': '100'}

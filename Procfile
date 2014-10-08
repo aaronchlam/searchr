@@ -1,1 +1,1 @@
-web: gunicorn searchr:app
+web: gunicorn searchr:app --log-file=-
