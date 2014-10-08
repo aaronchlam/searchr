@@ -15,7 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
-    <link href="stylesheet.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylesheet.css') }}" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,13 +31,22 @@
   <body>
 
     <div class="container">
+      <h1 class="center-block text-center">Searchr</h1>
 
-      <form class="form-inline search-flickr-form" action="{{ url_for(search_flickr) }}" method="post" role="form">
+      <br>
+
+      <form class="form-inline center-block search-flickr-form" action="{{ url_for('index') }}" method="post" role="form">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search Flickr" required="" autofocus="">
+          <input type="text" class="form-control" name="search-term" value="{{ search_term }}" required="" autofocus="">
         </div>
         <button class="btn btn-primary search-flickr-btn" type="submit">Search</button>
       </form>
+
+      <br>
+
+      {% if img_url %}
+        <img src="{{ img_url }}" class="img-rounded center-block">
+      {% endif %}
 
     </div> <!-- /container -->
 
