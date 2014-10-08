@@ -1,0 +1,12 @@
+.search-flickr-form {
+  width:  600px;
+  padding-left: 50px;
+}
+
+.search-flickr-form .form-group input {
+  width: 400px;
+}
+
+.search-flickr-btn {
+  width: 100px;
+}
