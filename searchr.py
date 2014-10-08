@@ -16,7 +16,7 @@ photo_url = 'https://farm%d.staticflickr.com/%s/%s_%s.jpg'
 @app.route('/', methods = ['GET', 'POST'])
 def index():
   if request.method == 'GET':
-    return render_template('index.html', img_url = None, search_term = 'Search Flickr...')
+    return render_template('index.html', img_url = None, search_term = '')
 
   search_term = str(request.form['search-term'])
   search_params = flickr_params.copy()
