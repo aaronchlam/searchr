@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, abort, redirect, url_for
 app = Flask(__name__, instance_relative_config = True)
 
 app.config.from_object('config')
-app.config.from_pyfile('config.py')
+app.config.from_envvar('FLICKR_API_KEY', silent = True)
 
 flickr_params = {'api_key': app.config['FLICKR_API_KEY'],
                  'method': 'flickr.photos.search',
