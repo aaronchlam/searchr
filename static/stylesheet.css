@@ -1,17 +1,12 @@
-body h1{
-  width: 550px;
-  margin: auto;
-  text-align: center;
-}
 .search-flickr-form {
-  margin: auto;
-  width:  550px;
+  width:  600px;
+  padding-left: 50px;
 }
 
-.search-flickr-form .form-group input{
+.search-flickr-form .form-group input {
   width: 400px;
 }
 
-.search-flickr-btn{
+.search-flickr-btn {
   width: 100px;
 }
