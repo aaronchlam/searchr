@@ -5,9 +5,17 @@ Check out the app live on http://searchr-uoft.herokuapp.com
 
 ## Local Deploy
 
-Assign your Flickr API Key to the environmental variable `FLICKR_API_KEY`
-and run the app.
+### Requirements
+* Python 2.7
+* pip
+
+### Instructions
+
+1. Install packages according to `requirements.txt`
+2. Assign your Flickr API Key to the environmental variable `FLICKR_API_KEY`
+3. Run the app.
 ```
+  pip install -r requirements.txt
   export FLICKR_API_KEY=<your flickr api key here>
   python searchr.py
 ```
